@@ -57,23 +57,23 @@ const LocationMatch: React.FC<LocationMatchProps> = ({ request }) => {
   useEffect(() => {
     try {
       fetchCountries();
-      fetchLocationsData();
+      fetchRegionsData();
     } catch (error) {
       setLoading(false);
     }
-  }, [fetchCountries, fetchLocationsData]);
+  }, [fetchCountries, fetchRegionsData]);
 
   const handleCountryChange = useCallback(
     (value: string) => {
       setCountryId(value);
       setRegionField(null);
-      if (value) {
+      if (value) { //whenever the country value is updated, then filter the second dropdown to just those regions of that country
         const selectedLocations = regions.filter(
           (obj) => obj.countryId === value
         );
         setSelectedRegions([...selectedLocations]);
       } else {
-        setRegionId("");
+        setRegionId(""); //If country is cleared, set region stuff to blank.
         setSelectedRegions([]);
       }
     },
