@@ -1,4 +1,6 @@
-// This is a code snippet on how one dropdown can interact with another dropdown using material ui library with React18 and TypeScript. Note that state is managed through the locationmatch parent component passing in selected regions based on country, and clearing the regionField when the selected country is cleared.
+// This is a code snippet on how one dropdown can interact with another dropdown using material ui library with React18 and TypeScript. 
+// Note that state is managed through the locationmatch parent component passing in selected regions based on country, 
+// and clearing the regionField when the selected country is cleared.
 import {
   Card,
   CardContent,
