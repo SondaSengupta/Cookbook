@@ -120,11 +120,11 @@ const LocationMatch: React.FC<LocationMatchProps> = ({ request }) => {
                 <AutoCompleteTextField
                   placeholderText="Search Countries"
                   aria-description="Search Countries"
-                  options={countries?.map((healthSystem) => ({
+                  options={countries?.map((country) => ({
                     value: country.name,
                     id: country.id,
                   }))}
-                  onChange={handleHealthSystemChange}
+                  onChange={handleCountryChange}
                 />
               </Grid>
               <Grid item xs={6}>
@@ -132,7 +132,7 @@ const LocationMatch: React.FC<LocationMatchProps> = ({ request }) => {
                   value={regionField}
                   id="SearchRegions"
                   onChange={handleRegionsChange}
-                  options={selectedRegionsOfCountry?.map((selectedEHRLocation) => ({
+                  options={selectedRegionsOfCountry?.map((selectedRegion) => ({
                     value: selectedRegion.externalId,
                     id: selectedRegion.id,
                   }))}
