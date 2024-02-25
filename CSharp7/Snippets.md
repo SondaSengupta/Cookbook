@@ -2,7 +2,7 @@
 
 ```json
 "address": [
- "line" : [ "123 Main Street"]
+ "line" : []
 ]
 ```
 
